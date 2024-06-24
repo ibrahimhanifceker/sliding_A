@@ -78,4 +78,4 @@ setInterval(function(){
         var socket = Sockets[i];
         socket.emit('New_Position', pack);
     }
-}, 1000/25);
+}, 1000/10);
