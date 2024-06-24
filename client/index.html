@@ -11,7 +11,7 @@
     socket.on('New_Position', function(data){
         ctx.clearRect(0,0,500,500);
         for(var i = 0; i < data.length; i++){
-            ctx.fillText('A', data[i].x, data[i].y);
+            ctx.fillText('B', data[i].x, data[i].y);
         }
     });
 </script>
