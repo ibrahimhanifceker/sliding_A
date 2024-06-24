@@ -1,0 +1,17 @@
+<canvas width="500" height="500" id="Map" style="border: 1px solid black;"></canvas>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const canvas = document.getElementById('Map');
+    const ctx = canvas.getContext("2d");
+
+    ctx.font="50px Arial";
+
+    var socket = io();
+
+    socket.on('New_Position', function(data){
+        ctx.clearRect(0,0,500,500);
+        for(var i = 0; i < data.length; i++){
+            ctx.fillText('A', data[i].x, data[i].y);
+        }
+    });
+</script>
